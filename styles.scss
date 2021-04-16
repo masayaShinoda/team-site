@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap');
+
+$main-clr: #B57EDC;
+$font-primary: "Assistant", sans-serif;
+$font-heading: "Asap", sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: url("./img/bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    // min-height: 200vh;
+}
+h1,h2,a,p {
+    line-height: 1.6;
+}
+h1,h2,a {
+    font-family: $font-primary;
+    font-weight: 700;
+    margin: 1.1rem 0;
+}
+h1 {
+    font-size: 3rem;
+}
+p, span, ul, li {
+    font-family: $font-primary;
+}
+p {
+    font-size: 1.45rem;
+    font-weight: 600;
+}
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2.5vh 7.5vw;
+    position: fixed;
+    top: 0;
+    // border: 1px solid red; //debug
+    z-index: 10;
+    img {
+        
+        min-width: 20vmin;
+        min-height: 20vmin;
+        max-width: 20vmin;
+        max-height: 20vmin;
+        min-width: 100px;
+        //logo
+    }
+    .nav {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            color: #fcfcfc;
+            max-height: 2.5rem;
+            border-radius: .8rem;
+            padding: 1.25rem;
+            background: $main-clr;
+          box-shadow: 1px 2px 3px rgba(0,0,0,.35);
+
+            li {
+                margin: 0.5rem .8rem;
+                text-shadow: 1px 2px 3px rgba(0,0,0,.35);
+                a {
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    
+                    p {
+                        font-size: 1.25rem; 
+                        line-height: 1.25;
+                        transition: ease-out .1s;
+                    }
+                    i {
+                        margin-right: .325rem;
+                    }
+                }
+                a:hover {
+                    p {
+                        border-bottom: 2px solid #ececec;
+                    }
+                    // border: 1px solid red; //debug
+                }
+                a:visited {
+                    color: #ececec;
+                }                
+            }        
+    }
+}
+@media (max-width: 480px) {
+    // mobile nav
+    .navContainer {
+        flex-direction: column;
+        position: absolute;
+
+    }
+}
+.callToAction {
+    background: $main-clr;
+    color: #fcfcfc;
+    text-decoration: none;
+    font-size: 1.25rem;
+    border-radius: .8rem;
+    padding: .325rem 1.1rem;
+    margin-bottom: 0;
+    transition: ease-in-out .2s;
+    box-shadow: 1px 2px 3px rgba(0,0,0,.35);
+
+}
+.callToAction:hover {
+    background: #ececec;
+    color: $main-clr;
+}
+.callToActionArrow {
+    color: $main-clr;
+    font-size: 1.75rem;
+}
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 20vh;
+    padding: 2.5vh 7.5vw;
+    margin-top: 27.5vh;
+    // border: 1px solid blue; //debug
+    // margin-top: 20vh;
+    h1 {
+        color: #fcfcfc;
+        text-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    }
+    p {
+        color: #fcfcfc;
+        text-shadow: 1px 2px 3px rgba(0,0,0,.5);
+
+    }
+}
+.membersContainer {
+    margin-top: 15vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 20vh;
+    // border: 1px solid red; //debug
+}
+.avatarsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    img {
+        max-width: 12.5vw;
+        margin: 0 2.5vw;
+        transition: ease-in 0.2s;
+    }
+    img:hover {
+        -webkit-filter: drop-shadow(4px 3px 8px transparentize($main-clr, 0.15));
+         filter: drop-shadow(4px 3px 8px transparentize($main-clr, 0.15));
+
+    }
+}
+@media (max-width: 1023px) {
+    .avatarsContainer {
+        img {
+            max-width: 25vw;
+        }
+    }
+}
