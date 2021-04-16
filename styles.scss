@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khmer&display=swap');
+
 
 $main-clr: #B57EDC;
 $font-primary: "Assistant", sans-serif;
@@ -30,6 +32,9 @@ h1,h2,a {
 }
 h1 {
     font-size: 3rem;
+}
+#helloText {
+    font-family: "Khmer";
 }
 p, span, ul, li {
     font-family: $font-primary;
