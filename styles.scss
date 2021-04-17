@@ -108,7 +108,16 @@ p {
     .navContainer {
         flex-direction: column;
         position: absolute;
+        padding: 0 !important;
 
+        .nav {
+            li {
+                margin: 0.25rem .425rem;
+    
+            }
+            // border: 1px solid green; //debug
+            max-width: 100vw;
+        }
     }
 }
 .callToAction {
